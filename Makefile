@@ -1,7 +1,10 @@
-all: css
+all: css js
 
 css:
-	lessc style/shufflesque.less > shufflesque.css
+	lessc less/shufflesque3.less > shufflesque3.css
+
+js:
+	coffee -c -j shufflesque3.js coffee/player.coffee
 
 clean:
-	rm *.css
+	rm *.css *.js
