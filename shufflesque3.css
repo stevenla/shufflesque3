@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Aller';
+  src: url('font/aller_rg-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Aller';
+  src: url('font/aller_bd-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Aller';
+  src: url('font/aller_lt-webfont.woff') format('woff');
+  font-weight: lighter;
+  font-style: normal;
+}
+
+#artwork {
+  width: 48px;
+  height: 48px;
+  background-color: #222222;
+  border: 2px solid #ffffff;
+}
