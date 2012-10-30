@@ -32,6 +32,8 @@
 			<string>trackUpdate</string>
 		<key>BTPlayStateFunction</key>
 			<string>playStateUpdate</string>
+		<key>BTStatusFunction</key>
+			<string>playerUpdate</string>
 			
 	</dict>
 </plist>
