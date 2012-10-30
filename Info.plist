@@ -1,32 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>BTArtworkFunction</key>
-	<string>artworkUpdate</string>
-	<key>BTArtworkHeight</key>
-	<integer>48</integer>
-	<key>BTArtworkWidth</key>
-	<integer>48</integer>
-	<key>BTMainFile</key>
-	<string>index.html</string>
-	<key>BTStatusFunction</key>
-	<string>playerUpdate</string>
-	<key>BTThemeArtist</key>
-	<string>Steven La</string>
-	<key>BTThemeIdentifier</key>
-	<string>com.stevenla.shufflesque3</string>
-	<key>BTThemeName</key>
-	<string>Shufflesque3</string>
-	<key>BTThemePreviewImage</key>
-	<string>preview.png</string>
-	<key>BTTrackFunction</key>
-	<string>trackUpdate</string>
-	<key>BTWindowHeight</key>
-	<integer>80</integer>
-	<key>BTWindowMode</key>
-	<string>desktop</string>
-	<key>BTWindowWidth</key>
-	<integer>800</integer>
-</dict>
+	<dict>
+		
+		<key>BTMainFile</key>
+			<string>index.html</string>
+		<key>BTThemePreviewImage</key>
+			<string>preview.png</string>
+			
+		<key>BTWindowWidth</key>
+			<integer>800</integer>
+		<key>BTWindowHeight</key>
+			<integer>60</integer>
+			
+		<key>BTThemeName</key>
+			<string>Shufflesque3</string>
+		<key>BTThemeIdentifier</key>
+			<string>com.stevenla.Shufflesque3</string>
+		<key>BTThemeArtist</key>
+			<string>Steven La</string>
+		<key>BTThemeVersion</key>
+			<string>1.0</string>
+		<key>BTArtistURL</key>
+			<string>http://stevenla.com</string>
+			
+		<key>BTTrackFunction</key>
+			<string>trackUpdate</string>
+		<key>BTStatusFunction</key>
+			<string>playerUpdate</string>
+			
+	</dict>
 </plist>
