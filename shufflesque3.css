@@ -1,25 +1,80 @@
 @font-face {
   font-family: 'Aller';
-  src: url('font/aller_rg-webfont.woff') format('woff');
+  src: url('font/aller_rg.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Aller';
-  src: url('font/aller_bd-webfont.woff') format('woff');
+  src: url('font/aller_bd.ttf') format('ttf');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: 'Aller';
-  src: url('font/aller_lt-webfont.woff') format('woff');
+  src: url('font/aller_lt.ttf') format('ttf');
   font-weight: lighter;
   font-style: normal;
+}
+
+body {
+  background-color: #444;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Aller';
+  text-shadow: 0px 1px 1px #000;
 }
 
 #artwork {
   width: 48px;
   height: 48px;
-  background-color: #222222;
-  border: 2px solid #ffffff;
+  position: absolute;
+  overflow: hidden;
+  top: 10px;
+  left: 10px;
+  background-color: #000;
+  border: 2px solid #fff;
+  box-shadow: 0px 1px 1px #000;
+}
+
+#artwork img {
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+#info {
+  width: 740px;
+  position: absolute;
+  top: 10px;
+  left: 75px;
+}
+
+#progress-wrap {
+  width: 200px;
+  height: 1px;
+  position: absolute;
+  top: 24px;
+  box-shadow: 0px 1px 1px #000;
+  background-color: #fff;
+}
+
+#progress-bar {
+  width: 130px;
+  height: 1px;
+  background-color: #9f4aa9;
+}
+
+#name {
+  position: absolute;
+  font-size: 13px;
+  top: 5px;
+}
+
+#meta {
+  position: absolute;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  top: 31px;
 }
