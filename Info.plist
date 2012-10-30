@@ -23,11 +23,15 @@
 			<string>1.0</string>
 		<key>BTArtistURL</key>
 			<string>http://stevenla.com</string>
-			
+		
+		<key>BTReadyFunction</key>
+			<string>themeReady</string>
+		<key>BTArtworkFunction</key>
+			<string>artworkUpdate</string>
 		<key>BTTrackFunction</key>
 			<string>trackUpdate</string>
-		<key>BTStatusFunction</key>
-			<string>playerUpdate</string>
+		<key>BTPlayStateFunction</key>
+			<string>playStateUpdate</string>
 			
 	</dict>
 </plist>
