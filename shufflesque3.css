@@ -60,7 +60,6 @@ body {
 }
 
 #progress-bar {
-  width: 130px;
   height: 1px;
   background-color: #9f4aa9;
 }
@@ -77,4 +76,8 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   top: 31px;
+}
+
+#dot {
+  font-family: Helvetica;
 }
