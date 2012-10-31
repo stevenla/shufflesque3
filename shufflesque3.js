@@ -1,6 +1,6 @@
 // Initialize
 function themeReady() {
-  $('#artwork').click(artAction);
+  $('#artwork-container').click(artClick);
 }
 
 // Gets called at an interval, used for progress bar
@@ -11,15 +11,15 @@ function playerUpdate() {
 }
 
 function trackUpdate(track) {
-  var newTrack = $('#base').clone().appendTo('body');
-  newTrack.removeAttr('id');
+  var newTrack = $('.base.info').clone().appendTo('body');
+  newTrack.removeClass('base');
   var oldTrack = $('.info.current');
 
   // Populate new track's data
   var $name = newTrack.find('.name');
-  $name.text(track.title);
-  newTrack.find('.artist').text(track.artist);
-  newTrack.find('.album').text(track.album);
+  $name.html(track.title);
+  newTrack.find('.artist').html(track.artist);
+  newTrack.find('.album').html(track.album);
 
   // Set current track
   newTrack.addClass('current');
@@ -38,19 +38,29 @@ function trackUpdate(track) {
 }
 
 function artworkUpdate(artworkURL) {
-  var $main = $('.main');
-  if (artworkURL == "") {
-    $main.hide();
-  }
-  else {
-    $main.show();
-    $main.attr('src', artworkURL);
-  }
+  var newArt = $('.base.artwork').clone().appendTo('#artwork-container');
+  newArt.removeClass('base');
+  var oldArt = $('.artwork.current');
+
+  // Set new src
+  if (artworkURL == "")
+    newArt.addClass('no-art');
+  else
+    newArt.attr('src', artworkURL);
+
+  // Set current art
+  newArt.addClass('current');
+  oldArt.removeClass('current');
+
+  // Remove old art
+  var t = setTimeout(function () {
+    oldArt.remove();
+  }, 1000);
 }
 
 // Center clicking stuff
 var clickCount = 0;
-var clickInterval = 400;
+var clickInterval = 500;
 var timeout;
 
 function artClick() {
@@ -63,8 +73,10 @@ function artClick() {
     artAction();
 
   // Else wait to execute action
-  else
-    timer = setTimeout(artAction, clickInterval);
+  else {
+    clearTimeout(timeout);
+    timeout = setTimeout(artAction, clickInterval);
+  }
 }
 
 function artAction() {
