@@ -1,5 +1,7 @@
 # Shufflesque3
 
+![preview](http://dl.stevenla.com/shufflesque3.png)
+
 A [Bowtie](http://bowtieapp.com) theme designed for quick music traversal and
 general niceness.
 
