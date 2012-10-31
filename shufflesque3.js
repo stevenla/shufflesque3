@@ -7,13 +7,13 @@ function themeReady() {
 function playerUpdate() {
   var ratio = Player.playerPosition() / Player.currentTrack().length;
   var percent = (ratio * 100) + '%';
-  $('.current .progress-bar').width(percent);
+  $('.info-current .progress-bar').width(percent);
 }
 
 function trackUpdate(track) {
-  var newTrack = $('.base.info').clone().appendTo('body');
-  newTrack.removeClass('base');
-  var oldTrack = $('.info.current');
+  var newTrack = $('.base-info').clone().appendTo('body');
+  newTrack.removeClass('base-info');
+  var oldTrack = $('.info-current');
 
   // Populate new track's data
   var $name = newTrack.find('.name');
@@ -22,8 +22,8 @@ function trackUpdate(track) {
   newTrack.find('.album').html(track.album);
 
   // Set current track
-  newTrack.addClass('current');
-  oldTrack.removeClass('current');
+  newTrack.addClass('info-current');
+  oldTrack.removeClass('info-current');
 
   // Set progress bar width to max of title or meta info
   var nameWidth = $name.width();
@@ -38,9 +38,9 @@ function trackUpdate(track) {
 }
 
 function artworkUpdate(artworkURL) {
-  var newArt = $('.base.artwork').clone().appendTo('#artwork-container');
-  newArt.removeClass('base');
-  var oldArt = $('.artwork.current');
+  var newArt = $('.base-artwork').clone().appendTo('#artwork-container');
+  newArt.removeClass('base-artwork');
+  var oldArt = $('.artwork-current');
 
   // Set new src
   if (artworkURL == "")
@@ -49,8 +49,8 @@ function artworkUpdate(artworkURL) {
     newArt.attr('src', artworkURL);
 
   // Set current art
-  newArt.addClass('current');
-  oldArt.removeClass('current');
+  newArt.addClass('artwork-current');
+  oldArt.removeClass('artwork-current');
 
   // Remove old art
   var t = setTimeout(function () {
