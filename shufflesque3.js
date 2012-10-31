@@ -58,6 +58,17 @@ function artworkUpdate(artworkURL) {
   }, 1000);
 }
 
+function playStateUpdate(playState) {
+  // Stopped
+  var $body = $('body');
+  $body.removeClass();
+  if (playState == 0)
+    $body.addClass('stopped');
+  else if (playState == 2)
+    $body.addClass('paused');
+
+}
+
 // Center clicking stuff
 var clickCount = 0;
 var clickInterval = 500;
