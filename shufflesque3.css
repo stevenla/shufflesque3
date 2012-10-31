@@ -121,7 +121,7 @@ body.paused {
 .progress-bar {
   width: 0%;
   height: 1px;
-  background-color: #9f4aa9;
+  background-color: #00e4ff;
   -webkit-transition: width .8s ease-in-out;
 }
 
