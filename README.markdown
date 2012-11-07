@@ -9,6 +9,6 @@
 A [Bowtie](http://bowtieapp.com) theme designed for quick music traversal and
 general niceness.
 
-To compile files into .bowtie file, just `make`
+If downloaded from source, just `make` to compile files
 
 Uses the [Aller](http://www.fontsquirrel.com/fonts/Aller) font
