@@ -1,18 +1,18 @@
 @font-face {
   font-family: 'Aller';
-  src: url('font/aller_rg.ttf') format('ttf');
+  src: url('font/aller_rg.ttf');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Aller';
-  src: url('font/aller_bd.ttf') format('ttf');
+  src: url('font/aller_bd.ttf');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: 'Aller';
-  src: url('font/aller_lt.ttf') format('ttf');
+  src: url('font/aller_lt.ttf');
   font-weight: lighter;
   font-style: normal;
 }
@@ -20,7 +20,7 @@
 body {
   color: #fff;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Aller';
+  font-family: 'Aller', Helvetica, sans-serif;
   text-shadow: 0 1px 1px #000;
   -webkit-transition: opacity .8s ease-in-out;
 }
@@ -151,3 +151,4 @@ body {
 .dot {
   font-family: Helvetica;
 }
+
