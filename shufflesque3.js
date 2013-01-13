@@ -57,8 +57,8 @@ function artworkUpdate(artworkURL) {
     newArt.attr('src', artworkURL);
 
   // Set current art
-  newArt.addClass('artwork-current');
   oldArt.removeClass('artwork-current');
+  newArt.addClass('artwork-current');
 
   // Remove old art
   var t = setTimeout(function () {
