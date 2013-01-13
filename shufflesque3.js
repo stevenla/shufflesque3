@@ -10,31 +10,39 @@ function playerUpdate() {
   $('.info-current .progress-bar').width(percent);
 }
 
-function trackUpdate(track) {
-  var newTrack = $('.base-info').clone().appendTo('body');
-  newTrack.removeClass('base-info');
+function removeOldTrack() {
   var oldTrack = $('.info-current');
-
-  // Populate new track's data
-  var $name = newTrack.find('.name');
-  $name.html(track.title);
-  newTrack.find('.artist').html(track.artist);
-  newTrack.find('.album').html(track.album);
-
-  // Set current track
-  newTrack.addClass('info-current');
   oldTrack.removeClass('info-current');
-
-  // Set progress bar width to max of title or meta info
-  var nameWidth = $name.width();
-  var metaWidth = newTrack.find('.meta-info').width();
-  var maxWidth = Math.max(nameWidth, metaWidth);
-  newTrack.find('.progress-wrap').width(maxWidth);
 
   // Remove track when after animation finishes
   var t = setTimeout(function () {
     oldTrack.remove();
   }, 1000);
+}
+
+function trackUpdate(track) {
+  removeOldTrack();
+  if (track.title) {
+    var newTrack = $('.base-info').clone().appendTo('body');
+    newTrack.removeClass('base-info');
+
+    // Populate new track's data
+    var $name = newTrack.find('.name');
+    $name.html(track.title);
+    newTrack.find('.artist').html(track.artist);
+    newTrack.find('.album').html(track.album);
+    if (!track.artist || !track.album)
+      newTrack.find('.dot').addClass('hidden');
+
+    // Set current track
+    newTrack.addClass('info-current');
+
+    // Set progress bar width to max of title or meta info
+    var nameWidth = $name.width();
+    var metaWidth = newTrack.find('.meta-info').width();
+    var maxWidth = Math.max(nameWidth, metaWidth);
+    newTrack.find('.progress-wrap').width(maxWidth);
+  }
 }
 
 function artworkUpdate(artworkURL) {
