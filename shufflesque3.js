@@ -51,7 +51,7 @@ function artworkUpdate(artworkURL) {
   var oldArt = $('.artwork-current');
 
   // Set new src
-  if (artworkURL == "")
+  if (artworkURL === "")
     newArt.addClass('no-art');
   else
     newArt.attr('src', artworkURL);
@@ -70,9 +70,9 @@ function playStateUpdate(playState) {
   // Stopped
   var $body = $('body');
   $body.removeClass();
-  if (playState == 0)
+  if (playState === 0)
     $body.addClass('stopped');
-  else if (playState == 2)
+  else if (playState === 2)
     $body.addClass('paused');
 
 }
@@ -88,7 +88,7 @@ function artClick() {
   clearTimeout(timeout);
 
   // Triple is the max number of clicks
-  if (clickCount == 3)
+  if (clickCount === 3)
     artAction();
 
   // Else wait to execute action
@@ -100,11 +100,11 @@ function artClick() {
 
 function artAction() {
   // Pause
-  if (clickCount == 1) {
+  if (clickCount === 1) {
     Player.playPause();
   }
   // Next
-  else if (clickCount == 2) {
+  else if (clickCount === 2) {
     Player.nextTrack();
   }
   // Previous
