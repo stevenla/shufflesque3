@@ -1,8 +1,8 @@
 # Shufflesque3
 
-![preview](http://dl.stevenla.com/shufflesque3.png)
+![preview](https://raw.github.com/stevenla/shufflesque3/master/preview.png)
 
-[Download](http://dl.stevenla.com/Shufflesque3.bowtie.zip)
+[Download](https://github.com/stevenla/shufflesque3/blob/master/dist/Shufflesque3.bowtie.zip)
 
 ---
 
